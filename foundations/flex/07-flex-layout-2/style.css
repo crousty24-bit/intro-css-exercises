@@ -1,29 +1,90 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    word-spacing: 1.2px;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 32px;
+  text-align: center;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex: 1;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  padding: 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(2, 300px);
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 2em;
+  padding: 48px;
+  /* I went for Grid instead but then no flex-wrap*/
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  font-size: smaller;
+  padding: 16px;
 }

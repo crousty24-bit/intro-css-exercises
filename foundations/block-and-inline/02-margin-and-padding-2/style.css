@@ -42,3 +42,43 @@ button {
   padding-inline: 15px;
   margin: 0 auto;
 }
+
+/* New styles for flex container and boxes */
+.flex-container {
+  display: flex;
+  background-color: lightpink;
+  justify-content: center; /* Center boxes horizontally within the container */
+  align-items: center; /* Center boxes vertically within the container */
+  gap: 10px; /* Optional: add space between boxes */
+  height: 400px;
+  width: 600px; 
+  padding: 10px;
+}
+
+.flex-container div {
+  font-size: 20px;
+  text-align: center;
+  border: 4px solid black;
+  width: 250px;
+  height: 100px;
+  margin-top: 10px;
+  flex: 1, 1, auto;/* Allow boxes to grow and shrink equally, based on width/height prop */
+}
+
+.flex-container .box1 {
+  background-color: lightcoral;
+ 
+
+}
+
+.flex-container .box2 {
+  background-color: lightseagreen;
+  
+  
+}
+
+.flex-container .box3 {
+  background-color: lightblue;
+ 
+  
+}
